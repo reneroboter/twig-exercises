@@ -1,0 +1,27 @@
+Hello my name is {{ name }}!<br>
+<pre>
+Charset: {{ _charset }}
+Template: {{ _self }}
+Context: {{ dump(_context) }}
+</pre>
+
+{# setting variables #}
+{% set foo = 'bar' %}
+{% set bar = ['foo', 'bar'] %}
+{{ foo }}
+{{ bar.0 }}
+
+{# filter #}
+{{ bar|join() }} <br>
+{% apply upper%}
+ Haaaaaaaaaalt stop! 
+{% endapply %}<br>
+<img width="120" height="100" src="https://www.kukksi.de/wp-content/uploads/2019/08/Frauentausch-Andreas-BILD-RTL-II-1000x563.jpg">
+
+{{ 'René' | rot13}}
+
+
+{# functions #}
+{% for i in range(low=0, high=10, step=2) %}
+    {{ i }},
+{% endfor %}

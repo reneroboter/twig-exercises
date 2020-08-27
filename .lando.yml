@@ -1,0 +1,8 @@
+name: twig
+recipe: lamp
+config:
+  webroot: .
+
+tooling:
+  composer:
+    service: appserver
