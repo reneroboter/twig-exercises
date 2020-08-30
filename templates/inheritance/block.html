@@ -1,0 +1,10 @@
+<title>{% block title %} Hello World {% endblock %}</title>
+
+<h1>{{ block('title') }}</h1>
+<h1>{{ block('title') }}</h1>
+
+{% if block('yolo', 'inheritance/yolo.html') is defined %}
+<h1>{{ block('yolo', 'inheritance/yolo.html') }}</h1>
+{% endif %}
+
+{% block body %}{% endblock %}

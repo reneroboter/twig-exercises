@@ -1,0 +1,23 @@
+{% apply inline_css %}
+<html>
+<head>
+    <style>
+        p { color: red; }
+    </style>
+</head>
+<body>
+<p>Hello CSS!</p>
+</body>
+</html>
+{% endapply %}
+{{ "path-seg*ment"|url_encode }} {# rawurlencode #}
+
+{{ "string with spaces"|url_encode }} {# rawurlencode #}
+
+{{ {'param': 'value', 'foo': 'bar'}|url_encode }}
+
+{% set myArray = { a: "Hello", b: "World" } %}}
+
+{{ myArray|json_encode }}
+
+{{ 1.44|round(2) }}

@@ -1,0 +1,12 @@
+{% set value = 'no spaces' %}
+{%- if true-%}
+    {{- value -}}
+{%- endif -%}
+
+<li>
+    {{~ value ~}}
+</li>
+
+{{ "foo #{ 1 + 2 }" }}
+
+{{ (1..5)|join(', ') }}
